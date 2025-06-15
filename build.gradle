@@ -11,11 +11,11 @@ base {
 }
 
 repositories {
-    // Add repositories to retrieve artifacts from in here.
-    // You should only use this when depending on other mods because
-    // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-    // See https://docs.gradle.org/current/userguide/declaring_repositories.html
-    // for more information about repositories.
+    // Repositories for fetching dependencies.
+    // Loom already adds Minecraft and Fabric repositories, but we explicitly
+    // declare them here to ensure resolution works in all environments.
+    maven { url 'https://maven.fabricmc.net/' }
+    mavenCentral()
 }
 
 dependencies {
